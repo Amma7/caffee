@@ -2,9 +2,10 @@
 *{
     margin:0;
     padding:0;
+    border-radius: 5px;
 }
 body{
-        background:linear-gradient(rgba(0,0,0,0.3),rgba(255, 255, 255, 0.2));
+        background:linear-gradient(rgba(239, 139, 0, 0.3),rgba(253, 247, 247, 0.876));
         background-position: cover;
         background-size: cover;
         background-repeat:no-repeat;
@@ -32,10 +33,6 @@ body{
     right:20px; 
     transform:translateY(-50%);
 }
-
-
-
-
 .navbar{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:rgba(0, 0, 0, 0.87) !important; 
@@ -47,20 +44,26 @@ body{
     background-color: #a59b68;
 }
 .navbar-brand img{
-    width:80px;
-    height:80px;
+    position: absolute;
+    display: inline;
+    width:100px;
+    height:100px;
     overflow:hidden;
+    margin-left: -50px;
+    top:0;
 }
 .navbar-brand a:hover, .navbar-brand a:focus{
     text-decoration: none;
 }
 .navbar-brand span{
+    position: relative;
+    display: flex;
     color:#201d129c !important;
     text-transform: uppercase;
-    font-size:24px ;
+    font-size:20px ;
     margin-top: 20px;
-    margin: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: oblique;
 } 
  .navbar-nav .nav-link {
@@ -71,6 +74,13 @@ body{
         font-weight: bold;
         text-align: center;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  .active {
+      background-color: #fecea6;
+      animation:animateBlink 3s linear infinite;
+      width: auto;
+     
+         
     }
  .navbar-nav .nav-link::after{
        content:"";
@@ -134,21 +144,32 @@ body{
     width:100%;
     margin-bottom: 15px;
     position: relative;
-    border:2px solid #3f0c1f;
+    border:2px solid #f1c368;
     overflow: hidden;
    }     
    #minu-tile:hover,#special-tile:hover,#map-tile:hover{
     box-shadow:0 1px 5px 1px #cccccc;
    }
    #menu-tile{
-    background: url('../image/home_bg_300.jpg') no-repeat;
+    background: url('../image/images\ \(10\).jpg') no-repeat;
     background-position: center;
+    background-size: cover;
+     border-radius: 20px;
     
    }
    #special-tile{
-    background: url('../image/home_bg_300.jpg') no-repeat;
+    background: url('../image/images\ \(3\).jpg') no-repeat;
     background-position: center;
+    background-size: cover;
+    border-radius: 20px;
    
+   }
+   #map-tile{
+    background-position: center;
+    border-radius: 20px;
+   }
+   #menu-tile:hover , #special-tile:hover , #map-tile:hover{
+    transform: translateY(-3%);
    }
     #home-tiles{
     margin-top: 60px;
@@ -180,6 +201,7 @@ body{
     text-align:right;
     margin-top: -15px;
     margin-right:-15px;
+    border-radius: 10px;
    }
    .menu-item-tile .menu-item-price span {
     font-size: .6em;
@@ -282,13 +304,14 @@ body{
     color:#db8f37;
    }           
 /*------large size-----*/
-@media(max-width:1400px){
+@media(max-width:1600px){
     .jumbotron{
-        background: url('../image/home_bg.jpg') no-repeat;
+        background: url('../image/cafe-house.webp') no-repeat;
         background-size: cover;
         height:675px;
         box-shadow: 0 0 50px #3f0c1f;
         border:1px solid #9c8e93;
+        border-radius: 30px;
         
         
      }
@@ -299,7 +322,7 @@ body{
     
 
     .jumbotron{
-        background: url('../image/home_bg_400.jpg') no-repeat;
+        background: url('../image/cafe-house.webp') no-repeat;
         height:675px;
         box-shadow: 0 0 50px #3f0c1f;
         border:2px solid #3f0c1f;
@@ -316,7 +339,7 @@ body{
    }
     .menu-item-description{
         display: flex;
-    padding-right:30px;
+        padding-right:30px;
    }
    .menu-item-title{
     margin:10px;
@@ -336,7 +359,7 @@ body{
 /*------extrea small----*/
 @media(min-width:800px) and (max-width:991px){
     .jumbotron{
-        background: url('../image/home_bg_300.jpg') no-repeat;
+        background: url('../image/cafe-house.webp') no-repeat;
         height:675px;
         box-shadow: 0 0 10px #3f0c1f;
         border:1px solid #cda8b5;
@@ -371,14 +394,38 @@ body{
     margin-left: 25px;
    }
 } 
+@media(min-width:500px) and (max-width:680px){
+    .navbar-brand img{
+        position: relative;
+        display: flex;
+        width: 80px !important;
+        height:60px !important;
+        margin: auto;
+        margin-left: -5px !important;
+    }
+    .navbar-brand span{
+
+         position: relative;
+    display: flex;
+    color:#201d129c !important;
+    text-transform: uppercase;
+    font-size:12px;
+    margin-top: px;
+    margin-left: 80px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+    }
+
+}
 @media(min-width:500px) and (max-width:790px){
      .jumbotron{
-        background: url('../image/home_bg_400.jpg') no-repeat;
+        background: url('../image/cafe-house.webp') no-repeat;
         height:675px;
         box-shadow: 0 0 10px #3f0c1f;
         border:1px solid #cda8b5;
         background-size: cover;
         background-position: cover;
+        height: 80vh;
      }
        .category-tile{
     position: relative;
@@ -389,8 +436,12 @@ body{
     margin: 30px auto 15px;
    }
      .navbar-brand img{
-        width: 40px;
-        height:40px;
+        position: absolute;
+        display: flex;
+        width: 80px !important;
+        height:60px !important;
+        margin: auto;
+        margin-left: -60px;
     }
      #home-tiles{
      margin-top: 60px;
@@ -441,21 +492,33 @@ body{
 
 /*------xextra small---*/
 @media(min-width:200px) and (max-width:500px){
-   .navbar-brand span{
-    color:#201d129c !important;
-    text-transform: uppercase;
-    font-size:12px ;
-    margin-top: 20px;
-    margin: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: oblique;
-} 
+
 .navbar-nav li a{
+       position: relative;
+        display: inline;
         margin: 10px;
         color:rgb(3, 5, 4) !important;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align: center;
+        cursor: pointer;
+    }
+    .navbar-brand span{
+    position: relative;
+    display: flex;
+    color:#201d129c !important;
+    text-transform: uppercase;
+    font-size:12px;
+    margin-top: px;
+    margin-left: 80px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+}
+    .navbar-nav li{
+        display: inline;
+        margin: auto;
+        justify-content: center;
+        width:100px;
     }
 
     .jumbotron{
@@ -469,9 +532,14 @@ body{
 
      }
      .navbar-brand img{
-        width: 40px;
-        height:40px;
+        position: absolute;
+        display: flex;
+        width: 80px !important;
+        height:60px !important;
+        margin: auto;
+        
     }
+    
    
   #home-tiles{
     margin-top: 60px;
@@ -488,7 +556,7 @@ body{
     font-size:8px;
     margin-left: 100px;
     margin-top: -20px;
-}
+   }
  .menu-item-photo{
     position: relative;
     margin-right:auto;
