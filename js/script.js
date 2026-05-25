@@ -25,7 +25,6 @@ forEach(link => {
     }
 })
 
-
 function loadPage(page){
     const mainContent = document.getElementById("main-content");
     mainContent.innerHTML = "<img src='image/Ajax-loader.gif'>";
