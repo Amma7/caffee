@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-     loadPage('./snippets/home-snippet.html');
+     loadPage('snippets/home-snippet.html');
     });
     
     document.querySelectorAll("navbar-toggler").forEach(link => {
@@ -27,7 +27,7 @@ forEach(link => {
 
 function loadPage(page){
     const mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = "<img src='../image/Ajax-loader.gif'>";
+    mainContent.innerHTML = "<img src='image/Ajax-loader.gif'>";
     fetch(page)
     .then(response => {
         if(!response.ok) { throw new Error("page not found");
@@ -42,6 +42,7 @@ function loadPage(page){
     });
 
 };
+
 
 
 // $(function(){
