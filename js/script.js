@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-     loadPage('snippets/home-snippet.html');
+     loadPage('snippet/home-snippet.html');
     });
     
     document.querySelectorAll("navbar-toggler").forEach(link => {
