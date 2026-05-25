@@ -17,13 +17,6 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         });
     });
-const activePage = window.location.pathname;
-const navlinks = document.querySelectorAll('.nav-link').
-forEach(link => {
-    if(link.href.includes(`${activePage}`)){
-        link.classList.add('active');
-    }
-})
 
 function loadPage(page){
     const mainContent = document.getElementById("main-content");
